@@ -31,4 +31,6 @@ spec:
       production: false
   repository: bucketrepo
   secretStorage: vault
+  vault:
+    url: http://hpcck3s-dev-1:8200
   webhook: lighthouse
