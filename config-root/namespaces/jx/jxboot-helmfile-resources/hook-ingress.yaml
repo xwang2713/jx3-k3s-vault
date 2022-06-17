@@ -20,4 +20,4 @@ spec:
                 port:
                   number: 80
             path: "/hook"
-      host: hook.jx.change.me
+      host: hook.jx.10.246.30.234.nip.io
