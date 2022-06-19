@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: xwang2713
+    provider: github
+    repository: jxv3-quickstart-py
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: xwang2713-jxv3-quickstart-py
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/xwang2713/jxv3-quickstart-py.git
+  org: xwang2713
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jxv3-quickstart-py
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/xwang2713/jxv3-quickstart-py
