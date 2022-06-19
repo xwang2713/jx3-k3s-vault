@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: jxv3-quickstart-golang-http
     - name: jxv3-quickstart-py
     scheduler: in-repo
   slack:
