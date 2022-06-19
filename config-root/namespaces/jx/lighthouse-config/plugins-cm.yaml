@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - xwang2713/jxv3-quickstart-golang-http
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - xwang2713/jxv3-quickstart-py
       require_self_approval: true
     cat: {}
@@ -25,6 +29,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      xwang2713/jxv3-quickstart-golang-http:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       xwang2713/jxv3-quickstart-py:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -37,6 +46,22 @@ data:
     plugins:
       xwang2713/jx3-k3s-vault:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      xwang2713/jxv3-quickstart-golang-http:
       - approve
       - assign
       - blunderbuss
@@ -79,6 +104,9 @@ data:
     triggers:
     - repos:
       - xwang2713/jx3-k3s-vault
+      trusted_org: todo
+    - repos:
+      - xwang2713/jxv3-quickstart-golang-http
       trusted_org: todo
     - repos:
       - xwang2713/jxv3-quickstart-py
